@@ -1,0 +1,36 @@
+.headerWrapper {
+    height: 5%;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+}
+
+.appLogo {
+    width: 5%;
+}
+
+.appName {
+    width: 45%;
+    color: white;
+    margin: auto 0;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.headerButtons {
+    margin: auto 5% auto auto;
+    width: 45%;
+}
+
+.headerButtons a {
+    padding: 1%;
+    margin-right: 5%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.headerButton {
+    color: white;
+    font-weight: bold;
+}
