@@ -1,0 +1,28 @@
+.product {
+    height: 45%;
+    width: 15%;
+    margin: 1%;
+}
+
+.product img {
+    height: 80%;
+    width: 100%;
+}
+
+.productDescription {
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.productTitle {
+    font-size: x-large;
+    font-family: system-ui;
+}
+
+.productCode {
+    font-family: 'Oswald';
+}
+
+.soldOut {
+    text-decoration: line-through;
+}
