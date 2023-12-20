@@ -8,12 +8,15 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';
+import { cartContext } from '../store/cart-context';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function AlertDialogSlide({ open, handleClose }) {
+    const cartCtx = React.useContext(cartContext);
+
     return (
         <React.Fragment>
             <Dialog
@@ -39,7 +42,11 @@ export default function AlertDialogSlide({ open, handleClose }) {
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-slide-description">
-                        Cart Items
+                        <ul>
+                            {
+                                cartCtx.products.map((product) => <li key={product.sareeCode}>{product.productName} X {product.quantity}</li>)
+                            }
+                        </ul>
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>

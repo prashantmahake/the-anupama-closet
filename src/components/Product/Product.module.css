@@ -26,3 +26,18 @@
 .soldOut {
     text-decoration: line-through;
 }
+
+.addToCartButton {
+    width: 100%;
+    text-align: end;
+}
+
+.productQuantity {
+    text-align: center;
+    height: 100%;
+    width: 10%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    pointer-events: none;
+    font-weight: bold;
+}

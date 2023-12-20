@@ -13,11 +13,13 @@ function DesignerDresses() {
             {
                 products.map(product =>
                     <Product
+                        key={product.sareeCode}
                         image={product.img}
                         productName={product.productName}
                         sareeCode={product.sareeCode}
                         price={product.price}
                         soldOut={product.soldOut}
+                        quantity={product.quantity}
                     />
                 )
             }

@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import classes from './Header.module.css'
 import { APP_TITLE } from '../Utils/Constants'
 import { Badge, Button, IconButton } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AlertDialogSlide from './Cart'
+import { cartContext } from '../store/cart-context'
+import logo from '../closetLogo.jpeg'
 
 function Header() {
+    const cartCtx = useContext(cartContext)
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -17,10 +20,15 @@ function Header() {
         setOpen(false);
     };
 
+    const getCartQuantity = () => {
+        const cartQuantity = cartCtx.products.reduce((sum, product) => sum + product.quantity, 0);
+        return cartQuantity;
+    }
+
     return (
         <header className={classes.headerWrapper}>
             <div className={classes.applogo}>
-                <img src='' alt='Logo'></img>
+                <img src={logo} alt='Logo' height={'90%'}></img>
             </div>
             <div className={classes.appName}>
                 {APP_TITLE}
@@ -32,7 +40,7 @@ function Header() {
                 <NavLink to="/designer-dresses">Oxidized Jwellery</NavLink>
                 <NavLink to="/designer-dresses">Sarees</NavLink>
                 <IconButton onClick={handleClickOpen}>
-                    <Badge color="secondary" badgeContent={5}>
+                    <Badge color="secondary" badgeContent={getCartQuantity()}>
                         <ShoppingCartIcon sx={{ color: 'black' }} />{" "}
                     </Badge>
                 </IconButton>
