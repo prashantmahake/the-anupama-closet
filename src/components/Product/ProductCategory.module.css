@@ -1,0 +1,50 @@
+.homePageProductWrapper {
+    width: 12%;
+}
+
+.homePageProductImageWrapper {
+    width: 100%;
+    height: 90%;
+    padding: 0.5%;
+    background-color: #d8d8d8;
+    border-radius: 50%;
+    transition: 0.30s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.homePageProductImageWrapper:hover {
+    transform: scale(1.05);
+}
+
+.homePageProduct {
+    background-color: white;
+    border-radius: 50%;
+    border-radius: 50%;
+    height: 100%;
+    background-size: 100% 115%;
+}
+
+.homePageProductName {
+    text-align: center;
+}
+
+.homePageProductName p {
+    margin-top: 10%;
+}
+
+.handloomSaree {
+    background-image: url('../../designerSaree.jpeg');
+}
+
+.designerOutfit {
+    background-image: url('../../designerOutfit.jpeg');
+}
+
+.handMadeJwellery {
+    background-image: url('../../handmade.jpeg');
+}
+
+.oxidizedJwellery {
+    background-image: url('../../oxidized_jwellery.jpeg');
+}
