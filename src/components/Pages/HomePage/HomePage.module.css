@@ -1,0 +1,51 @@
+.homePageWrapper {
+    height: 100%;
+    animation: fadeIn 2s;
+
+}
+
+.coverImage {
+    height: 60%;
+    background-image:
+        linear-gradient(to bottom, rgb(52 52 53 / 52%), rgb(0 0 0 / 46%)),
+        url('../../../home-background.jpeg');
+    background-size: 100% 130%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.imageText {
+    height: 30%;
+    width: 30%;
+    font-size: 1.4em;
+    line-height: 1.2;
+    color: #a4a4a4;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    font-weight: 600;
+}
+
+.homePageProductsContainer {
+    height: 25%;
+    margin-top: -5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contactUsWrapper {
+    height: 5%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

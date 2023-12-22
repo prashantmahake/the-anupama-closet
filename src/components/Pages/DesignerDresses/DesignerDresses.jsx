@@ -1,11 +1,10 @@
 import React from 'react'
-import Product from '../Product/Product'
-import cottonSaree from '../../cotton.jpeg'
+import Product from '../../Product/Product'
+import cottonSaree from '../../../cotton.jpeg'
 import classes from './DesignerDresses.module.css'
+import { DUMMY_PRODUCTS } from '../../../Dummy_data'
 
-const products = [
-
-]
+const products = DUMMY_PRODUCTS;
 
 function DesignerDresses() {
     return (

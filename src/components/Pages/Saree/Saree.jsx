@@ -1,11 +1,11 @@
 import React from 'react'
 
-function HomePage() {
+function Saree() {
     return (
         <div>
-            Home Page
+            Saree
         </div>
     )
 }
 
-export default HomePage
+export default Saree

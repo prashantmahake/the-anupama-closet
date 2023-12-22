@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import classes from './Header.module.css'
-import { APP_TITLE } from '../Utils/Constants'
+import { APP_TITLE, ROUTE_DEFINATION } from '../Utils/Constants'
 import { Badge, Button, IconButton } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AlertDialogSlide from './Cart'
@@ -35,10 +35,10 @@ function Header() {
             </div>
             <div className={classes.headerButtons}>
                 <NavLink to='/' className={({ isActive }) => isActive ? classes.active : undefined}>Home</NavLink>
-                <NavLink to="/designer-dresses" className={({ isActive }) => isActive ? classes.active : undefined}>Designer Dresses</NavLink>
-                <NavLink to="/designer-dresses">Handmade Jwellery</NavLink>
-                <NavLink to="/designer-dresses">Oxidized Jwellery</NavLink>
-                <NavLink to="/designer-dresses">Sarees</NavLink>
+                <NavLink to={`/${ROUTE_DEFINATION.OXIDIZED_JWELLERY}`} className={({ isActive }) => isActive ? classes.active : undefined}>Oxidized Jwellery</NavLink>
+                <NavLink to={`/${ROUTE_DEFINATION.HANDLOOM_SAREES}`} className={({ isActive }) => isActive ? classes.active : undefined}>Sarees</NavLink>
+                <NavLink to={`/${ROUTE_DEFINATION.DESIGNER_OUTFITS}`} className={({ isActive }) => isActive ? classes.active : undefined}>Designer Outfits</NavLink>
+                <NavLink to={`/${ROUTE_DEFINATION.HANDMADE_JWELLERY}`} className={({ isActive }) => isActive ? classes.active : undefined}>Handmade Jwellery</NavLink>
                 <IconButton onClick={handleClickOpen}>
                     <Badge color="secondary" badgeContent={getCartQuantity()}>
                         <ShoppingCartIcon sx={{ color: 'black' }} />{" "}
