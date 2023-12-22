@@ -1,17 +1,18 @@
 import React from 'react'
 import classes from './HomePage.module.css'
-import ProductCategory from '../Product/ProductCategory'
+import ProductCategory from '../../Product/ProductCategory'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
 import { IconButton } from '@mui/material';
+import { ROUTE_DEFINATION } from '../../../Utils/Constants';
 
 function HomePage() {
     const PRODUCT_CATEGORIES = [
-        { title: 'Handloom Sarees', image: 'handloomSaree' },
-        { title: 'Designer Outfits', image: 'designerOutfit' },
-        { title: 'Handmade Jwellery', image: 'handMadeJwellery' },
-        { title: 'Oxidized Jwellery', image: 'oxidizedJwellery' }
+        { title: 'Oxidized Jwellery', image: 'oxidizedJwellery', routeURL: ROUTE_DEFINATION.OXIDIZED_JWELLERY },
+        { title: 'Handloom Sarees', image: 'handloomSaree', routeURL: ROUTE_DEFINATION.HANDLOOM_SAREES },
+        { title: 'Designer Outfits', image: 'designerOutfit', routeURL: ROUTE_DEFINATION.DESIGNER_OUTFITS },
+        { title: 'Handmade Jwellery', image: 'handMadeJwellery', routeURL: ROUTE_DEFINATION.HANDMADE_JWELLERY },
     ];
 
     return (
@@ -28,8 +29,10 @@ function HomePage() {
                 {
                     PRODUCT_CATEGORIES.map((productCategory) =>
                         <ProductCategory
+                            key={productCategory.image}
                             categoryTitle={productCategory.title}
                             image={productCategory.image}
+                            routeURL={productCategory.routeURL}
                         />)
                 }
 

@@ -1,9 +1,12 @@
+@import url('../UI/_commonStyles.css');
+
 .headerWrapper {
     height: 5%;
     display: flex;
     background-color: white;
     justify-content: space-between;
     box-shadow: 0 4px 6px -6px #222;
+    font-family: var(--fontFamily);
 }
 
 .appLogo {
@@ -19,8 +22,8 @@
 }
 
 .headerButtons {
-    margin: auto 5% auto auto;
-    width: 45%;
+    margin: auto 0% auto auto;
+    width: 50%;
 }
 
 .headerButtons a {

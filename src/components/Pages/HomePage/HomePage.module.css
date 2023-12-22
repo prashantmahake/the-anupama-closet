@@ -1,6 +1,6 @@
 .homePageWrapper {
     height: 100%;
-    animation: fadeIn 3s;
+    animation: fadeIn 2s;
 
 }
 
@@ -8,7 +8,7 @@
     height: 60%;
     background-image:
         linear-gradient(to bottom, rgb(52 52 53 / 52%), rgb(0 0 0 / 46%)),
-        url('../../home-background.jpeg');
+        url('../../../home-background.jpeg');
     background-size: 100% 130%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
