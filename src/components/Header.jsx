@@ -4,7 +4,7 @@ import classes from './Header.module.css'
 import { APP_TITLE, ROUTE_DEFINATION } from '../Utils/Constants'
 import { Badge, Button, IconButton } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import AlertDialogSlide from './Cart'
+import AlertDialogSlide from './Cart/Cart'
 import { cartContext } from '../store/cart-context'
 import logo from '../closetLogo.jpeg'
 
