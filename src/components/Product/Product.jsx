@@ -46,9 +46,9 @@ function Product({ image, productName, sareeCode, price, soldOut, quantity }) {
 
   return (
     <div className={classes.product}>
-      <NavLink to={`/${ROUTE_DEFINATION.PRODUCT_DETAIL}/${sareeCode}`}>
-        <img src={image} alt='saree-image' />
-      </NavLink>
+      {/* <NavLink to={`/${ROUTE_DEFINATION.PRODUCT_DETAIL}/${sareeCode}`}> */}
+      <img src={image} alt='saree-image' />
+      {/* </NavLink> */}
       <div className={classes.productDescription}>
         <span className={classes.productTitle}>{productName}</span><br />
         <small className={soldOut ? classes.soldOut : undefined}>Price: {formatter.format(price)} (All Inclusive)</small>
@@ -59,7 +59,7 @@ function Product({ image, productName, sareeCode, price, soldOut, quantity }) {
           {
             <Button
               variant='text'
-              onClick={() => { addToCart({ productName, sareeCode, price, quantity }) }}
+              onClick={() => { addToCart({ productName, sareeCode, price, quantity, image }) }}
               style={{ color: 'black' }}
             >
               Add to Cart

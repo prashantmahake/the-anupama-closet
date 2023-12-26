@@ -1,11 +1,11 @@
 import React from 'react'
 import classes from './HomePage.module.css'
-import ProductCategory from '../../Product/ProductCategory'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
 import { IconButton } from '@mui/material';
 import { ROUTE_DEFINATION } from '../../../Utils/Constants';
+import ProductCategory from '../../Product/ProductCategory'
 
 function HomePage() {
     const PRODUCT_CATEGORIES = [

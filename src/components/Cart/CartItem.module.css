@@ -1,0 +1,40 @@
+@import url('../../UI/_commonStyles.css');
+
+.cartItem {
+    /* border: 1px solid green; */
+    padding: 1%;
+    margin: 2%;
+    display: flex;
+}
+
+.cartItemDetails {
+    line-height: 1.5;
+}
+
+.cartItemDetails .productName {
+    font-weight: 600;
+    font-size: large;
+}
+
+.cartItemQuantity {
+    width: 25%;
+    display: flex;
+    margin-left: auto;
+}
+
+.cartItemQuantity input {
+    width: 30%;
+    text-align: center;
+    pointer-events: none;
+    border: none;
+}
+
+.cartItemQuantity button {
+    background: var(--themeColor);
+    height: 80%;
+    margin: auto;
+}
+
+.cartItemQuantity button:hover {
+    background: var(--themeColor);
+}
