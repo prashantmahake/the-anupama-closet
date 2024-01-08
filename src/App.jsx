@@ -3,7 +3,7 @@ import RootLayout from "./components/RootLayout"
 import HomePage from "./components/Pages/HomePage/HomePage"
 import DesignerDresses, { dressLoader } from "./components/Pages/DesignerDresses/DesignerDresses"
 import HandmadeJwellery from './components/Pages/HandmadeJwellery/HandmadeJwellery'
-import OxidizedJwellery from './components/Pages/OxidizedJwellery/OxidizedJwellery'
+import OxidizedJwellery, { oxidozedJwelleryLoader } from './components/Pages/OxidizedJwellery/OxidizedJwellery'
 import Saree from './components/Pages/Saree/Saree'
 import { ROUTE_DEFINATION } from './Utils/Constants'
 import ProductDetail from './components/Product/ProductDetail'
@@ -22,7 +22,11 @@ const router = createBrowserRouter([
                 loader: dressLoader
             },
             { path: `/${ROUTE_DEFINATION.HANDMADE_JWELLERY}`, element: <HandmadeJwellery /> },
-            { path: `/${ROUTE_DEFINATION.OXIDIZED_JWELLERY}`, element: <OxidizedJwellery /> },
+            {
+                path: `/${ROUTE_DEFINATION.OXIDIZED_JWELLERY}`,
+                element: <OxidizedJwellery />,
+                loader: oxidozedJwelleryLoader
+            },
             { path: `/${ROUTE_DEFINATION.PRODUCT_DETAIL}/:productID`, element: <ProductDetail /> }
         ]
     }

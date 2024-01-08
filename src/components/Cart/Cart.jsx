@@ -59,7 +59,7 @@ export default function AlertDialogSlide({ open, handleClose }) {
                 <DialogContent>
                     {
                         cartCtx.products.length === 0 ? emptyCart() :
-                            (cartCtx.products.map((product) => <CartItem key={product.sareeCode} item={product} />))
+                            (cartCtx.products.map((product) => <CartItem key={product.productCode} item={product} />))
                     }
 
                     {cartCtx.products.length !== 0 && <div className={classes.cartTotal}>

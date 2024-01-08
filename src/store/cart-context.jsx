@@ -15,7 +15,7 @@ export default function CartContextProvider({ children }) {
     }, [cart]);
 
     const addProduct = (item) => {
-        const itemIndex = cart.findIndex(product => product.sareeCode == item.sareeCode);
+        const itemIndex = cart.findIndex(product => product.productCode == item.productCode);
         if (itemIndex != -1) { //if item exist then increase the quantity by 1 and replace the item at existing index
             const cartCopy = [...cart];
             const item = cartCopy.at(itemIndex);
@@ -28,7 +28,7 @@ export default function CartContextProvider({ children }) {
         }
     }
     const removeProduct = (item) => {
-        const itemIndex = cart.findIndex(product => product.sareeCode == item.sareeCode);
+        const itemIndex = cart.findIndex(product => product.productCode == item.productCode);
         if (itemIndex != -1) { //if item exist then decrease the quantity by 1 and replace the item at existing index
             const cartCopy = [...cart];
             const item = cartCopy.at(itemIndex);

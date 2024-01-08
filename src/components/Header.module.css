@@ -14,7 +14,7 @@
 }
 
 .appName {
-    width: 45%;
+    width: max-content;
     color: black;
     margin: auto 0;
     font-weight: 700;
@@ -24,11 +24,12 @@
 .headerButtons {
     margin: auto 0% auto auto;
     width: 50%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .headerButtons a {
     padding: 1%;
-    margin-right: 5%;
     text-decoration: none;
     color: black;
     font-weight: bold;

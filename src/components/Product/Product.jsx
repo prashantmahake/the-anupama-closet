@@ -7,7 +7,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import { cartContext } from '../../store/cart-context';
 import { NavLink } from 'react-router-dom';
 import { ROUTE_DEFINATION } from '../../Utils/Constants';
-function Product({ image, productName, sareeCode, price, soldOut, quantity }) {
+function Product({ image, productName, productCode, price, soldOut, quantity }) {
   const cartCtx = useContext(cartContext);
   const [productCount, setProductCount] = useState(0);
 
@@ -46,7 +46,7 @@ function Product({ image, productName, sareeCode, price, soldOut, quantity }) {
 
   return (
     <div className={classes.product}>
-      {/* <NavLink to={`/${ROUTE_DEFINATION.PRODUCT_DETAIL}/${sareeCode}`}> */}
+      {/* <NavLink to={`/${ROUTE_DEFINATION.PRODUCT_DETAIL}/${productCode}`}> */}
       <img src={image} alt='saree-image' />
       {/* </NavLink> */}
       <div className={classes.productDescription}>
@@ -59,7 +59,7 @@ function Product({ image, productName, sareeCode, price, soldOut, quantity }) {
           {
             <Button
               variant='text'
-              onClick={() => { addToCart({ productName, sareeCode, price, quantity, image }) }}
+              onClick={() => { addToCart({ productName, productCode, price, quantity, image }) }}
               style={{ color: 'black' }}
             >
               Add to Cart
